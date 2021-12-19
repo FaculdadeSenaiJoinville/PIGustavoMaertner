@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+body{
+	margin: 0 auto;
+	font-family: "Century Gothic", "sans-serif";
+	background-color: #F5FFFA;
+	height:100%;
+}
+#fieldsetInit{
+	width: 90%;
+	margin-left: 5%;
+	margin-top:1.5%;
+	text-align:center;
+	height:25%;
+	border-color:black;
+	background-color: #87CEEB;
+}
+#fieldsetSec{
+	width: 50%;
+	margin-left:25%;
+	margin-top:2.1%;
+	height: 80%;
+	border-color:black;
+	background-color: #F5FFFA;
+}
+#btnSair{
+	margin-left:95%;
+}
+#imgUsu{
+	margin-top:-3%;
+	margin-left:95%;
+	max-width: 5%;
+	height: 5%;
+	float: right;
+}
+#titulo{
+	text-align:center;
+	font-size: 40px;
+}
+
+#fieldCadastro{
+	width: 70%;
+	margin-left: 15%;
+	border-color: black;
+}
+#fieldCadastroFunc{
+	width: 50%;
+	margin-left: 25%;
+	border-color: black;
+}
+.labelCadastro{
+	font-size:25px;
+	margin-left:30%;
+	margin-top: 100%;
+	align: center;
+}
+.labelCadastroCategoria{
+	font-size:25px;
+	margin-left:20%;
+	margin-top: 100%;
+	align: center;
+}
+.labelCadastroFunc{
+	font-size:25px;
+	margin-left:5%;
+	margin-top: 100%;
+	align: center;
+}
+
+#selCategoria{
+	
+}
+#inputNomeCat{
+	width: 17%;
+}
+.inputEsquerda{
+	width:40%;
+}
+#inputBuscaFunc{
+	text-align:center;
+	margin-left:43%;
+	margin-top:5%;
+}
+#inputBuscaLeit{
+	text-align:center;
+	margin-left:43%;
+	margin-top:5%;
+}
+#tabela{
+	margin-left:29.67%;
+}
+#rodape{
+	margin-top: 5%;
+	width:100%;
+	height:3%;
+	background-color: #87CEEB;
+	
+    bottom: 0;
+    position: flex;
+    text-align: center;
+
+}
+#footerRodape{
+	margin-left: 42%;
+    position:absolute;
+		
+}
+.menuGerente{
+	text-decoration: none;
+	color: black;
+	margin-left:2%;
+}
+.menuGerente:hover{
+	color:gray;
+}
+#inputBuscaFunc{
+	border-radius:4px;
+	height: 5%;
+	background: #fff url(https://cdn1.iconfinder.com/data/icons/bijou/10/Search.png) no-repeat 5% center;
+}
+#btnResetCadastro{
+	margin-left:80%;
+}
+#btnResetCadastro:hover{
+	transform: scale(1.05);
+    transition: all 0.1s;
+}
+.btnCadastro{
+	background-color: #6495ED;
+	border-color: black;
+}
+#btnSubmitCadastro:hover{
+	transform: scale(1.05);
+    transition: all 0.1s;
+}
+
+.btnTabela{
+	max-height: 12%;
+	max-width: 10%;
+	padding-left: 15%;
+	margin-left:9%;
+}
+
+
+/*Tabela*/
+
+.listaRegistros table{
+	border: 1px solid #000;
+	border-collapse: collapse;
+	margin: 0 auto;
+	min-width: 50%;
+}
+
+.listaRegistros table th{
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	padding: 0 5px;
+	border: transparent;
+}
+
+.listaRegistros tr, .listaRegistros td, .listaRegistros th{
+	border: 1px solid #B0C4DE;
+	padding: 0px 5px;
+}
+
+.listaRegistros tr, .listaRegistros td{
+	font-size: 16px;
+	text-align: center;
+}
+
+.listaRegistros	tr:nth-child(even){
+	background-color: #b1ccf5;
+}
+
+.listaRegistros tr:nth-child(odd){
+	background-color: #83afd3;
+}
+
+.listaRegistros .acoes{
+	width: 70px;
+}
+
+.listaRegistros table img{
+	padding: 0 5px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+.modalAviso, .modalEditar, .modalPergunta{
+	display: none;
+}
+/* .funcEsquerda{
+	float: left;
+}
+.funcDireita{
+	float: right;
+} */

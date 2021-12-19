@@ -1,0 +1,194 @@
+<html><head>
+<title>Data dictionary: mydb</title>
+<style>
+    td,th {
+      text-align:center; 
+      vertical-align:middle;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    caption, th, td {
+      padding: .2em .8em;
+      border: 1px solid #fff;
+    }
+    caption {
+      background: #dbb768;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    th {
+      font-weight: bold;
+      background: #f3ce7d;
+    }
+    td {
+      background: #ffea97;
+    }
+  </style>
+</head>
+<body>
+<table><caption>Table: funcionario - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>id</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Id do funcionário</td></tr>
+<tr><td>login</td><td>VARCHAR(20)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Login do funcionário (Usado para acessar o sistema)</td></tr>
+<tr><td>senha</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Senha do funcionário (Usado para acessar o sistema)</td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Nome do funcionário</td></tr>
+<tr><td>cpf</td><td>BIGINT(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>cpf do funcionário</td></tr>
+<tr><td>rg</td><td>VARCHAR(10)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Rg do funcionário</td></tr>
+<tr><td>telefone_principal</td><td>BIGINT(13)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Telefone principal do funcionário</td></tr>
+<tr><td>telefone_secundario</td><td>BIGINT(13)</td><td>No</td><td>No</td><td>No</td><td></td><td>Telefone secundário do funcionário</td></tr>
+<tr><td>data_nasc</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Data de nascimento do funcionário</td></tr>
+<tr><td>email</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Email do funcionário</td></tr>
+<tr><td>cargo</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Cargo do usuário
+0 - Funcionário
+1 - Gerente</td></tr>
+<tr><td>endereco_id</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Chave estrangeira do endereço do leitor</td></tr>
+</table></br>
+<table><caption>Table: leitor - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>id</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Id do leitor</td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Nome do leitor</td></tr>
+<tr><td>cpf</td><td>BIGINT(11)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>cpf  do leitor</td></tr>
+<tr><td>rg</td><td>VARCHAR(10)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>rg do leitor</td></tr>
+<tr><td>telefone_principal</td><td>BIGINT(13)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Telefone principal do leitor</td></tr>
+<tr><td>telefone_secundario</td><td>BIGINT(13)</td><td>No</td><td>No</td><td>No</td><td></td><td>Telefone secundário  do leitor</td></tr>
+<tr><td>data_nasc</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Data de nascimento do leitor</td></tr>
+<tr><td>nome_mae</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Nome da mãe do leitor</td></tr>
+<tr><td>foto</td><td>BLOB</td><td>No</td><td>No</td><td>No</td><td></td><td>Foto do leitor</td></tr>
+<tr><td>email</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>E-mail do leitor</td></tr>
+<tr><td>endereco_id</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Chave estrangeira do endereco</td></tr>
+</table></br>
+<table><caption>Table: categoria - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>id</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Id da categoria do livro
+</td></tr>
+<tr><td>nome</td><td>VARCHAR(15)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Nome da categoria do Livro
+</td></tr>
+</table></br>
+<table><caption>Table: livro - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>id</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Id do livro</td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Nome do Livro</td></tr>
+<tr><td>ano</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Ano de lançamento do livro</td></tr>
+<tr><td>autor</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Autor do livro</td></tr>
+<tr><td>revisao</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Revisão do exemplar do livro(Versão)</td></tr>
+<tr><td>status_fisico</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>É referente ao status da integridade física do livro
+0 - Disponível
+1 - Estragado
+2 - Em concerto</td></tr>
+<tr><td>categoria_id</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Chave estrangeira da categoria do livro</td></tr>
+</table></br>
+<table><caption>Table: emprestimo - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>id</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Id do empréstimo</td></tr>
+<tr><td>data</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Data em que o empréstimo foi realizado</td></tr>
+<tr><td>status</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Status referente ao empréstimo
+0 - Em aberto
+1 - Finalizado</td></tr>
+<tr><td>quant_renovacoes</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Flag referente a quantidade de vezes que o empréstimo já foi renovado (Limite de 3)</td></tr>
+<tr><td>data_final</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Data prevista de fim, irá sofrer alteração caso o leitor decida renovar o empréstimo</td></tr>
+<tr><td>leitor_id</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Chave estrangeira do leitor
+</td></tr>
+</table></br>
+<table><caption>Table: multa - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>id</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Id da multa</td></tr>
+<tr><td>valor</td><td>DECIMAL(6,2)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Valor a ser pago da multa</td></tr>
+<tr><td>status</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Status da multa
+0 - Em atraso
+1 - Paga
+</td></tr>
+<tr><td>data_gerada</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Campo referente a data em que a multa foi gerada</td></tr>
+<tr><td>emprestimo_id</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Chave estrangeira referente ao empréstimo</td></tr>
+</table></br>
+<table><caption>Table: endereco - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>id</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td>Id do endereço</td></tr>
+<tr><td>cidade</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Cidade dos usuários (funcionário/leitor)</td></tr>
+<tr><td>bairro</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Bairro do usuário (funcionário/leitor)</td></tr>
+<tr><td>rua</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Rua do usuário (funcionário/leitor)</td></tr>
+<tr><td>numero</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Número do usuário (funcionário/leitor)</td></tr>
+<tr><td>cep</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Cep do usuário (funcionário/leitor)</td></tr>
+</table></br>
+<table><caption>Table: emprestimo_has_livro - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>emprestimo_id</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Chave estrangeira do empréstimo</td></tr>
+<tr><td>livro_id</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td>Chave estrangeira do livro</td></tr>
+<tr><td>status_livro</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td>Status referente ao livro
+(Cada livro dentro de um empréstimo pode ter um status diferente)
+0 - A devolver
+1 - Devolvido</td></tr>
+</table></br>
+</body></html>

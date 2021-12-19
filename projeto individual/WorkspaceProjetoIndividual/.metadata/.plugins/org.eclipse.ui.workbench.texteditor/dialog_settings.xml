@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="validaC"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="validaC"/>
+			<item value="valida"/>
+			<item value="buscar"/>
+			<item value="inputBuscaFunc"/>
+			<item value="valorBusca"/>
+			<item value="btnResetCadastro"/>
+			<item value="btnSubmitCadastro"/>
+			<item value="]"/>
+			<item value="validacaoEmail"/>
+			<item value="inputBusca"/>
+			<item value="funcionario"/>
+			<item value="frmEditaFuncionario"/>
+			<item value="BIBLIOTECA.livro.carregarProdutos"/>
+			<item value="listaLivro"/>
+			<item value="dis"/>
+		</list>
+		<list key="replacehistory">
+			<item value="leitor"/>
+			<item value="frmEditaLeitor"/>
+			<item value="funcionario"/>
+			<item value="labelCadastroCategoria"/>
+			<item value=""/>
+			<item value="lixeira.png"/>
+			<item value="lupa.png"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1223"/>
+		<item key="DIALOG_Y_ORIGIN" value="309"/>
+		<item key="DIALOG_WIDTH" value="385"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

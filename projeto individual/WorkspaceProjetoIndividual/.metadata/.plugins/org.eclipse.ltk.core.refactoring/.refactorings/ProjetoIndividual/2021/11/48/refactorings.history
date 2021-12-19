@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.com.biblioteca.jdbcinterface.livroDAO&apos; to &apos;LivroDAO&apos;&#x0D;&#x0A;- Original project: &apos;ProjetoIndividual&apos;&#x0D;&#x0A;- Original element: &apos;br.com.biblioteca.jdbcinterface.livroDAO&apos;&#x0D;&#x0A;- Renamed element: &apos;br.com.biblioteca.jdbcinterface.LivroDAO&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;livroDAO&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.com.biblioteca.jdbcinterface{livroDAO.java[livroDAO" matchStrategy="1" name="LivroDAO" qualified="false" references="true" similarDeclarations="false" stamp="1637625226268" textual="false" version="1.0"/>
+</session>

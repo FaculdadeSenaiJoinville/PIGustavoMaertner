@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastro categorias</title>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="../../../css/gerente/gerente.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../../../js/gerente/gerente.js"></script>
+<script src="../../../js/gerente/categoria.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../css/jquery-ui.css">
+</head>
+<body>
+
+	<header>	
+
+	</header>
+
+	<nav>
+
+	</nav>
+
+		<p id="titulo">Cadastro de Categorias</p>
+
+	<section>
+
+		<fieldset id="fieldCadastro">
+
+		<form id="frmCategoria" name="frmCategoria" method="Post" action="#" onsubmit="">
+
+		<div id="cadastro">
+			<label class="labelCadastro" id="idNomeCat" for="inputNomeCat">Nome da categoria:</label>
+			<input class="inputEsquerda" type="text" name="nomeCat" id="inputNomeCat"><br><br>
+		</div>
+			<button class="btnCadastro" id="btnResetCadastro" type="reset">Limpar</button>
+			<button class="btnCadastro" id="btnSubmitCadastro" type="button" onclick="BIBLIOTECA.categoria.cadastrar()">Cadastrar</button>
+		</form>
+
+		</fieldset>
+
+		<form id="buscaFunc" name="buscaFunc" method="Post" action="#" onsubmit="">
+			<input class="input" type="text" name="buscaFuncionario" id="inputBuscaFunc" placeholder="Categoria" onkeyup="BIBLIOTECA.categoria.buscar()"><br><br>
+		</form>
+
+
+		<div id="listaCategoria" class="listaRegistros"></div>
+		
+		<div id="modalAviso" class="modalAviso"></div>
+
+		<div id="modalPergunta" class="modalPergunta"></div>
+				
+		<div id="modalEditaCategoria" class="modalEditar">
+			<form name="frmEditaCategoria" id="editaCategoria" class="frmEditar">
+				<table>
+					<tr>
+					<th>Nome da categoria</th>
+						<td>
+							<input type="text" name="selCategoriaEdicao">
+						</td>
+					</tr>
+				</table>
+				<input type="hidden" name="idCategoria">
+			</form>
+		</div>
+		
+	</section>
+
+		<div id="rodape">
+			<footer id="footerRodape">
+			</footer>
+		</div>
+
+</body>
+</html>

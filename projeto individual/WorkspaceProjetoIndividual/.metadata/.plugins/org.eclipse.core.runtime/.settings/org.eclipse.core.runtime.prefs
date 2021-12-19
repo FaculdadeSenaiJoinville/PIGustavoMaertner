@@ -1,0 +1,8 @@
+content-types/org.eclipse.core.resources.preferences/charset=UTF-8
+content-types/org.eclipse.jpt.jaxb.core.content.jaxbProperties/charset=UTF-8
+content-types/org.eclipse.jst.jsp.core.cssjspsource/charset=UTF-8
+content-types/org.eclipse.jst.jsp.core.jspfragmentsource/charset=UTF-8
+content-types/org.eclipse.jst.jsp.core.tagxsource/charset=UTF-8
+content-types/org.eclipse.pde.buildProperties/charset=UTF-8
+content-types/org.eclipse.pde.pluginProperties/charset=UTF-8
+eclipse.preferences.version=1

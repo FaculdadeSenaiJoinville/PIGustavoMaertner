@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+body{
+	margin: 0 auto;
+	font-family: "Century Gothic", "sans-serif";
+	background-color: #F5FFFA;
+}
+#fieldsetInit{
+	width: 90%;
+	margin-left: 5%;
+	margin-top:1.5%;
+	text-align:center;
+	height:25%;
+	border-color:black;
+	background-color: #87CEEB;
+}
+#fieldsetSec{
+	width: 50%;
+	margin-left:27%;
+	margin-top:1.5%;
+	height: 80%;
+	border-color:black;
+	background-color: #F5FFFA;
+}
+
+#idNome{
+	margin-left: 13%;
+}
+#inputNome{
+	width:60%;
+}
+#idCpf{
+	margin-left: 13%;
+}
+#inputEmail{
+	width:60%;
+}
+#idData{
+	margin-left: 13%;
+}
+#idTelefone{
+	margin-left: 13%;
+}
+#inputTelefone{
+	max-width:22.5%;
+}
+#inputTelefoneSec{
+	max-width:22.5%;
+}
+#idEmail{
+	margin-left: 13%;
+}
+#idCidade{
+	margin-left: 13%;
+}
+#inputCidade{
+	max-width:22.5%;
+}
+#inputBairro{
+	max-width:22.5%;
+}
+#idRua{
+	margin-left: 13%;
+}
+#inputRua{
+	max-width:27%;
+}
+#inputCep{
+	max-width:27%;
+}
+#idLogin{
+	margin-left: 13%;
+}
+#inputLogin{
+	max-width:24%;
+}
+#inputSenha{
+	max-width:24%;
+}
+
+#btnSair{
+	margin-left:95%;
+}
+#imgUsu{
+	margin-top:-3%;
+	margin-left:95%;
+	max-width: 5%;
+	height: 5%;
+	float: right;
+}
+#titulo{
+	text-align:center;
+	font-size: 40px;
+}
+#fieldCadastro{
+	width: 45%;
+	margin-left: 28.5%;
+	border-color: black;
+}
+.labelCadastro{
+	font-size:25px;
+}
+.inputEsquerda{
+	width:40%;
+}
+.inputDireita{
+	width:60%;
+}
+#inputBuscaFunc{
+	text-align:center;
+	margin-left:47%;
+	margin-top:5%;
+}
+#tabela{
+	margin-left:29.67%;
+}
+#rodape{
+	margin-top: 5%;
+	width:100%;
+	height:1%;
+	background-color: #87CEEB;
+}
+#footerRodape{
+	margin-left: 42%;
+}
+.menuGerente{
+	text-decoration: none;
+	color: black;
+	margin-left:5%;
+}
+.menuGerente:hover{
+	color:gray;
+}
+#inputBuscaFunc{
+	border-radius:4px;
+	height: 5%;
+	background: #fff url(https://cdn1.iconfinder.com/data/icons/bijou/10/Search.png) no-repeat 5% center;
+}
+#btnResetCadastro{
+	margin-left:66%;
+}
+.btnCadastro{
+	background-color: #6495ED;
+	border-color: black;
+}
+.btnTabela{
+	max-height: 12%;
+	max-width: 10%;
+	padding-left: 15%;
+	margin-left:9%;
+}
+
+
+/*Tabela*/
+
+#tabela{
+	width:45%;
+}
+
+tr,td,th{
+	border: 1px solid #B0C4DE;
+	padding:5px;
+	max-width: 5%;
+}tr,td{
+	font-size: 14px;
+}
+tr:nth-child(even){
+	background-color: #b1ccf5;
+}
+tr:nth-child(odd){
+	background-color: #83afd3
+}

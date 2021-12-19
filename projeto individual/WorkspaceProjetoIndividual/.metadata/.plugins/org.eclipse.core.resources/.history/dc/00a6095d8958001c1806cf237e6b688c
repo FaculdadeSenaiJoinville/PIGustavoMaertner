@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastro Funcionario</title>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="../../../css/gerente/gerente.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../../../js/gerente/gerente.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+<script src="../../../js/gerente/funcionario.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../../../css/jquery-ui.css">
+</head>
+<body>
+
+	<header>	
+
+	</header>
+
+	<nav>
+
+	</nav>
+
+		<p id="titulo">Cadastro de Funcionarios</p>
+
+	<section>
+
+		<fieldset id="fieldCadastroFunc">
+
+		<form id="frmFuncionario" name="frmFuncionario" method="Post" action="#" onsubmit="">
+
+		<div id="cadastro">
+		
+			<label class="labelCadastroFunc" id="idNome" for="inputNome">Nome:</label>
+			<input class="funcEsquerda" type="text" name="nomeFunc" id="inputNome"><br><br>
+
+			<label class="labelCadastroFunc" id="idCpf" for="inputCpf">Cpf:</label>
+			<input class="funcEsquerda" type="text" name="cpf" id="inputCpf" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+
+			<label class="labelCadastroFunc" id="idRg" for="inputRg">Rg:</label>
+			<input class="funcEsquerda" type="text" name="rg" id="inputRg" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br><br>
+
+			<label class="labelCadastroFunc" id="idData" for="inputDate">Data Nascimento:</label>
+			<input class="funcEsquerda" type="date" name="date" id="inputDate"><br><br><br><br><br><br>
+
+			<label class="labelCadastroFunc" id="idTelefone" for="inputTelefone">Fone 1:</label>
+			<input class="funcEsquerda" type="text" name="telefone" id="inputTelefone" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+
+			<label class="labelCadastroFunc" id="idTelefoneSecundario" for="inputTelefoneSec">Fone 2:</label>
+			<input class="funcEsquerda" type="text" name="telefoneSec" id="inputTelefoneSec" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br><br>
+			
+			<label class="labelCadastroFunc" id="idEmail" for="inputEmail">E-mail:</label>
+			<input class="funcEsquerda" type="text" name="email" id="inputEmail"><br><br><br><br><br><br>
+		
+			<label class="labelCadastroFunc" id="idCidade" for="inputCidade">Cidade:</label>
+			<input class="funcDireita" type="text" name="cidade" id="inputCidade">
+
+			<label class="labelCadastroFunc" id="idBairro" for="inputBairro">Bairro:</label>
+			<input class="funcDireita" type="text" name="bairro" id="inputBairro"><br><br>
+
+			<label class="labelCadastroFunc" id="idRua" for="inputRua">Rua:</label>
+			<input class="funcDireita" type="text" name="rua" id="inputRua">
+			
+			<label class="labelCadastroFunc" id="idNumero" for="inputNumero">Numero:</label>
+			<input class="funcDireita" type="text" name="numero" id="inputNumero" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br><br>
+			
+			
+			<label class="labelCadastroFunc" id="idCep" for="inputCep">Cep:</label>
+			<input class="funcDireita" type="text" name="cep" id="inputCep" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br><br><br><br><br><br>
+
+			<label class="labelCadastroFunc" id="idLogin" for="inputLogin">Login:</label>
+			<input class="funcDireita" type="text" name="login" id="inputLogin">
+
+			<label class="labelCadastroFunc" id="idSenha" for="inputSenha">Senha:</label>
+			<input class="funcDireita" type="password" name="senha" id="inputSenha"><br><br>
+			
+			<label class="labelCadastroFunc" id="idCargoFunc" for="inputCargo">Cargo:</label>
+			<select name="cargoId" id="idCargo" name="cargo" class="inputEsquerda">
+				<option value="0" class="buscando">Funcionario</option>
+				<option value="1" class="buscando">Gerente</option>
+			</select>			
+			
+		</div>
+			<button class="btnCadastro" id="btnResetCadastro" type="reset">Limpar</button>
+			<button class="btnCadastro" id="btnSubmitCadastro" type="button" onclick="BIBLIOTECA.funcionario.cadastrar()">Cadastrar</button>
+		</form>
+
+		</fieldset>
+
+		<form id="buscaFunc" name="buscaFunc" method="Post" action="#" onsubmit="">
+			<input class="input" type="text" name="buscaLivro" id="inputBuscaFunc" placeholder="Funcionario" onkeyup="BIBLIOTECA.funcionario.buscar()"><br><br>
+		</form>
+
+
+		<div id="listaFuncionario" class="listaRegistros"></div>
+		
+		<div id="modalAviso" class="modalAviso"></div>
+
+		<div id="modalPergunta" class="modalPergunta"></div>
+				
+		<div id="modalEditaFuncionario" class="modalEditar">
+			<form name="frmEditaFuncionario" id="editaFuncionario" class="frmEditar">
+				<table>
+					<tr>
+					<th>Nome</th>
+						<td>
+							<input type="text" name="nomeEdicao">
+						</td>
+					</tr>
+					<tr>
+					<th>CPF</th>
+						<td>
+							<input type="text" name="cpfFunc" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+						</td>
+					</tr>
+					<tr>
+					<th>RG</th>
+						<td>
+							<input type="text" name="rgFunc" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+						</td>
+					</tr>		
+					<tr>										
+					<th>Data de Nascimento</th>
+						<td>
+							<input type="date" name="nascFunc">
+						</td>	
+					</tr>		
+					<tr>				
+					<th>Fone 1:</th>
+						<td>
+							<input type=text name="fone1Func" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+						</td>	
+					</tr>	
+					<tr>						
+					<th>Fone 2</th>
+						<td>
+							<input type=text name="fone2Func" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+						</td>	
+					</tr>
+										<tr>						
+					<th>E-mail</th>
+						<td>
+							<input type=text name="emailFunc" onblur="validacaoEmail(f1.email)">
+						</td>	
+					</tr>
+										<tr>						
+					<th>Cidade</th>
+						<td>
+							<input type=text name="cidadeFunc">
+						</td>	
+					</tr>
+															<tr>						
+					<th>Bairro</th>
+						<td>
+							<input type=text name="bairroFunc">
+						</td>	
+					</tr>
+					
+										<tr>						
+					<th>Rua</th>
+						<td>
+							<input type=text name="ruaFunc" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+						</td>	
+					</tr>
+															<tr>						
+					<th>Numero</th>
+						<td>
+							<input type=text name="NumeroFunc" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+						</td>	
+					</tr>
+					
+					
+															<tr>						
+					<th>CEP</th>
+						<td>
+							<input type=text name="cepFunc" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+						</td>	
+					</tr>
+					
+															<tr>						
+					<th>Login</th>
+						<td>
+							<input type=text name="loginFunc">
+						</td>	
+					</tr>
+					
+															<tr>						
+					<th>Senha</th>
+						<td>
+							<input type=password name="senhaFunc">
+						</td>	
+					</tr>
+					<tr>						
+					<th>Cargo</th>
+						<td>
+						<select name="cargoFunc" id="cargoFunc">
+							<option value="0" class="buscando">Funcionario</option>
+							<option value="1" class="buscando">Gerente</option>
+						</select>
+						</td>				
+					</tr>
+					
+					
+				</table>
+				<input type="hidden" name="idFunc">
+			</form>
+		</div>
+		
+	</section>
+	<div id="modalAviso"></div>
+		<div id="rodape">
+			<footer id="footerRodape"></footer>
+		</div>
+
+</body>
+</html>

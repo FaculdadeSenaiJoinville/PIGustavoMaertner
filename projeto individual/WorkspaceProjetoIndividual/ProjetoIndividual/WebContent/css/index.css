@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+body{
+	margin: 0 auto;
+	font-family: "Century Gothic", "sans-serif";
+	background-color: #F5FFFA;
+}
+#contact{
+	font-size: 14px;
+	margin-left: 90%;
+	margin-top: 4%;
+}
+fieldset{
+	text-align: center;
+	margin-top: 5%;
+	max-width: 20%;
+	margin-left: 39%;
+	background-color:white;
+	font-size:23px;
+}
+#txtLogin{
+	font-family: "Century Gothic", "sans-serif";
+	text-align: center;
+	margin-top:13%;
+	font-size: 35px;
+}
+#legend{
+	font-size:25px;
+}
+.input{
+	border-radius: 5px;
+}
+#btnSubmit{
+	margin-left: 75%;
+}
+#forgotPessword{
+	font-size: 15px;
+}
+#btnSubmit{
+	background-color: #6495ED;
+	border-color: #6495ED;
+}
+#btnSubmit:hover{
+	background-color: #4169E1;
+	border-color: #4169E1;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tela exemplo</title>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="../../css/telaExemplo.css">
+<script src="js/index.js"></script>
+</head>
+<body>
+
+	<header>	
+
+	</header>
+	
+	<nav>
+			<fieldset id="fieldsetInit">
+	
+			<fieldset id="fieldsetSec">
+			
+				<div id="menu">		
+					<a class="menuGerente" href="#">Início</a>
+					<a class="menuGerente" href="#">Empréstimo</a>
+					<a class="menuGerente" href="#">Cadastros</a>
+					<a class="menuGerente" href="#">Devoluções</a>
+					<a class="menuGerente" href="#">Relatórios</a>
+					<a class="menuGerente" href="#">Multas</a>
+				</div>
+			
+			
+			</fieldset>
+			
+			<img id="imgUsu" src="../../imgs/fotoPerfil.jpg">
+			<a id="btnSair" href="">sair</a>
+	
+		</fieldset>
+	
+	</nav>
+	
+		<p id="titulo">Cadastro de funcionário</p>
+	
+	<section>
+	
+		<fieldset id="fieldCadastro">
+
+		<form id="frmLogin" name="frmLogin" method="Post" action="#" onsubmit="">
+		
+		<div id="infosCadastro">
+		
+			<label class="labelCadastro" id="idNome" for="inputNome">Nome:</label>
+			<input class="" type="text" name="nomeFunc" id="inputNome"><br><br>
+
+			<label class="labelCadastro" id="idCpf" for="inputCpf">Cpf:</label>
+			<input class="" type="text" name="cpf" id="inputCpf">
+
+			<label class="labelCadastro" id="idRg" for="inputRg">Rg:</label>
+			<input class="" type="text" name="rg" id="inputRg"><br><br>
+
+			<label class="labelCadastro" id="idData" for="inputDate">Data Nascimento:</label>
+			<input class="" type="date" name="date" id="inputDate"><br><br><br><br><br><br>
+
+			<label class="labelCadastro" id="idTelefone" for="inputTelefone">Fone 1:</label>
+			<input class="" type="text" name="telefone" id="inputTelefone">
+
+			<label class="labelCadastro" id="idTelefoneSecundario" for="inputTelefoneSec">Fone 2:</label>
+			<input class="" type="text" name="telefoneSec" id="inputTelefoneSec"><br><br>
+			
+			<label class="labelCadastro" id="idEmail" for="inputEmail">E-mail:</label>
+			<input class="" type="text" name="email" id="inputEmail"><br><br><br><br><br><br>
+		
+			<label class="labelCadastro" id="idCidade" for="inputCidade">Cidade:</label>
+			<input class="" type="text" name="cidade" id="inputCidade">
+
+			<label class="labelCadastro" id="idBairro" for="inputBairro">Bairro:</label>
+			<input class="" type="text" name="bairro" id="inputBairro"><br><br>
+
+			<label class="labelCadastro" id="idRua" for="inputRua">Rua:</label>
+			<input class="" type="text" name="rua" id="inputRua">
+			
+			<label class="labelCadastro" id="idCep" for="inputCep">Cep:</label>
+			<input class="" type="text" name="cep" id="inputCep"><br><br><br><br><br><br>
+
+			<label class="labelCadastro" id="idLogin" for="inputLogin">Login:</label>
+			<input class="" type="text" name="login" id="inputLogin">
+
+			<label class="labelCadastro" id="idSenha" for="inputSenha">Senha:</label>
+			<input class="" type="password" name="senha" id="inputSenha"><br><br>
+			
+		</div>
+
+			<button class="btnCadastro" id="btnResetCadastro" type="reset">Limpar</button>
+			<button class="btnCadastro" id="btnSubmitCadastro" type="submit">Cadastrar</button>
+		</form>
+
+		</fieldset>
+
+		<form id="buscaFunc" name="buscaFunc" method="Post" action="#" onsubmit="">
+			<input class="input" type="text" name="buscaFuncionario" id="inputBuscaFunc" placeholder="Funcionário"><br><br>
+		</form>
+
+
+		<table id="tabela" class="tabelaProdutos" border="1px">
+			<thead>
+				<tr>
+					<th colspan="4" class="tituloTabela">Funcionários</th>
+				</tr>
+			<tr>
+				<th>Nome Funcionário</th>
+				<th>Data de Cadastro</th>
+				<th>ID</th>
+				<th>Ações</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Gustavo Maertner</td>
+					<td>01/09/2018</td>
+					<td>1</td>
+					<td>
+					<img id="imgBusca" class ="btnTabela" src="../../imgs/edit.png">
+					<img id="imgRemover" class ="btnTabela" src="../../imgs/delete.png">
+					</td>
+				</tr>
+				<tr>
+					<td>Joao Silva</td>
+					<td>01/09/2018</td>
+					<td>2</td>
+					<td>
+					<img id="imgBusca" class ="btnTabela" src="../../imgs/edit.png">
+					<img id="imgRemover" class ="btnTabela" src="../../imgs/delete.png">
+					</td>
+				</tr>
+				<tr>
+					<td>Robetro Jpão</td>
+					<td>01/09/2018</td>
+					<td>3</td>
+					<td>
+					<img id="imgBusca" class ="btnTabela" src="../../imgs/edit.png">
+					<img id="imgRemover" class ="btnTabela" src="../../imgs/delete.png">
+					</td>
+				</tr>
+				<tr>
+					<td>Vinicius da Silva</td>
+					<td>01/09/2018</td>
+					<td>4</td>
+					<td>
+					<img id="imgBusca" class ="btnTabela" src="../../imgs/edit.png">
+					<img id="imgRemover" class ="btnTabela" src="../../imgs/delete.png">
+					</td>
+				</tr>
+				<tr>
+					<td>Michel Lucas</td>
+					<td>01/09/2018</td>
+					<td>5</td>
+					<td>
+					<img id="imgBusca" class ="btnTabela" src="../../imgs/edit.png">
+					<img id="imgRemover" class ="btnTabela" src="../../imgs/delete.png">
+					</td>
+				</tr>
+				<tr>
+					<td>Lucas Da Silva</td>
+					<td>01/09/2018</td>
+					<td>6</td>
+					<td>
+					<img id="imgBusca" class ="btnTabela" src="../../imgs/edit.png">
+					<img id="imgRemover" class ="btnTabela" src="../../imgs/delete.png">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+			</section>
+
+		<div id="rodape">
+			<footer id="footerRodape">
+				Copyright &copy; Escola Sistêmica 2021
+			</footer>
+		</div>
+
+</body>
+</html>

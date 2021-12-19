@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastro Livros</title>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="../../../css/gerente/gerente.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../../../js/gerente/gerente.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+<script src="../../../js/gerente/livro.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../../../css/jquery-ui.css">
+</head>
+<body>
+
+	<header>	
+
+	</header>
+
+	<nav>
+
+	</nav>
+
+		<p id="titulo">Cadastro de Livros</p>
+
+	<section>
+
+		<fieldset id="fieldCadastro">
+
+		<form id="frmLivro" name="frmLivro" method="Post" action="#" onsubmit="">
+
+		<div id="cadastro">
+		
+			<label class="labelCadastroCategoria" id="idNomeCat" for="inputNome">Nome da categoria:</label>
+			<select name="CategoriaId" id="selCategoria" class="inputEsquerda">
+				<option value="" class="buscando">Buscando categorias . . .</option>
+			</select><br><br>
+			
+			<label class="labelCadastroCategoria" id="idNomeLivro" for="inputNomeLivro">Nome do Livro:</label>
+			<input class="inputEsquerda" type="text" name="nomeLivro" id="inputNomeLivro"><br><br>
+			
+			<label class="labelCadastroCategoria" id="idAnoLivro" for="inputAnoLivro">Data do Livro:</label>
+			<input class="inputEsquerda" type="text" name="anoLivro" id="inputAnoLivro" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength=4><br><br>
+			
+			<label class="labelCadastroCategoria" id="idAutorLivro" for="inputAutorLivro">Autor do Livro:</label>
+			<input class="inputEsquerda" type="text" name="autorLivro" id="inputAutorLivro"><br><br>
+			
+			<label class="labelCadastroCategoria" id="idRevLivro" for="inputRevLivro">Revisão do Livro:</label>
+			<input class="inputEsquerda" type="number" name="revLivro" id="inputRevLivro"><br><br>
+			
+		</div>
+			<button class="btnCadastro" id="btnResetCadastro" type="reset">Limpar</button>
+			<button class="btnCadastro" id="btnSubmitCadastro" type="button" onclick="BIBLIOTECA.livro.cadastrar()">Cadastrar</button>
+		</form>
+
+		</fieldset>
+
+		<form id="buscaFunc" name="buscaFunc" method="Post" action="#" onsubmit="">
+			<input class="input" type="text" name="buscaLivro" id="inputBuscaFunc" placeholder="Livro" onkeyup="BIBLIOTECA.livro.buscar()"><br><br>
+		</form>
+
+
+		<div id="listaLivro" class="listaRegistros"></div>
+		
+		<div id="modalAviso" class="modalAviso"></div>
+
+		<div id="modalPergunta" class="modalPergunta"></div>
+				
+		<div id="modalEditaLivro" class="modalEditar">
+			<form name="frmEditaLivro" id="editaLivro" class="frmEditar">
+				<table>
+					<tr>
+					<th>Categoria do Livro</th>
+						<td>
+						<select name="CategoriaId" id="selCategoriaEdicao">
+							<option value="" class="buscando">Buscando categorias . . .</option>
+						</select>
+						</td>	
+					</tr>
+					<th>Nome do Livro</th>
+						<td>
+							<input type="text" name="seLivroEdicao">
+						</td>
+					</tr>
+					<tr>
+					<th>Data do Livro</th>
+						<td>
+							<input type="text" name="anoLivro" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength=4>
+						</td>
+					</tr>
+					<tr>
+					<th>Autor do Livro</th>
+						<td>
+							<input type="text" name="autorLivro">
+						</td>
+					</tr>		
+					<tr>										
+					<th>Revisão do Livro</th>
+						<td>
+							<input type="number" name="revisaoLivro">
+						</td>	
+					</tr>		
+					<tr>						
+					<th>Status do Livro</th>
+						<td>
+						<select name="statusLivro" id="statusLivro">
+							<option value="0" class="buscando">Disponível</option>
+							<option value="1" class="buscando">Estragado</option>
+							<option value="2" class="buscando">Em conserto</option>
+						</select>
+						</td>				
+					</tr>
+				</table>
+				<input type="hidden" name="idLivro">
+			</form>
+		</div>
+		
+	</section>
+	<div id="modalAviso"></div>
+		<div id="rodape">
+			<footer id="footerRodape"></footer>
+		</div>
+
+</body>
+</html>

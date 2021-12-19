@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.ws.rs.core.Response.ResponseBuilder"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.bd.Conexao"/>
+    <fullyQualifiedTypeName name="com.sun.jdi.connect.spi.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.jdbcinterface.CategoriaDAO"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.jdbc.JDBCCategoriaDAO"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.jdbcinterface.CategoriaDao"/>
+    <fullyQualifiedTypeName name="java.awt.PageAttributes.MediaType"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.DELETE"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+    <fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxDatatypes.Scalar.String"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.jdbcinterface.livroDAO"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.modelo.Categoria"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.jdbcinterface.FuncionarioDAO"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.modelo.Funcionario"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.jdbc.JDBCFuncionarioDAO"/>
+    <fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
+    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.modelo.Livro"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.jdbc.JDBCLeitorDAO"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.modelo.Leitor"/>
+    <fullyQualifiedTypeName name="br.com.biblioteca.jdbcinterface.LeitorDAO"/>
+    <fullyQualifiedTypeName name="java.io.InputStream"/>
+    <fullyQualifiedTypeName name="org.glassfish.jersey.media.multipart.FormDataParam"/>
+    <fullyQualifiedTypeName name="org.glassfish.jersey.media.multipart.FormDataContentDisposition"/>
+    <fullyQualifiedTypeName name="java.io.OutputStream"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+</qualifiedTypeNameHistroy>
