@@ -4,9 +4,7 @@ BIBLIOTECA.leitor = new Object();
 $(document).ready(function(){
 	
 	BIBLIOTECA.leitor.cadastrar = function(){
-		
-		BIBLIOTECA.leitor.inserirImagem();
-				
+						
 		var leitor = new Object();
 		
 		
@@ -45,39 +43,7 @@ $(document).ready(function(){
 		}
 		BIBLIOTECA.leitor.buscar();
 	};
-	
-	BIBLIOTECA.leitor.inserirImagem = function(){
-		
-		var leitor = new Object();
-		
-		
-		leitor.foto = document.frmLeitor.files.files[0];
-		
-		console.log("leitor.foto");
-		console.log(leitor.foto);
 
-		
-		var formData = new FormData();
-		
-		formData.append('foto', leitor.foto);
-		
-		console.log("formData");
-		console.log(formData);
-
-		
-	    $.ajax({
-	        url: "/ProjetoIndividual/rest/leitor/inserirLivro",
-	        type: 'POST',
-	        data: formData,
-	        success: function (data) {
-	            alert("Imagem cadastrada!")
-	        },
-	        cache: false,
-	        contentType: false,
-	        processData: false
-	    });
-
-	};
 		
 	BIBLIOTECA.leitor.buscar = function(){
 		var valorBusca = $("#inputBuscaFunc").val();
@@ -244,14 +210,13 @@ $(document).ready(function(){
 		leitor.numero = document.frmEditaLeitor.NumeroFunc.value;
 		leitor.cep = document.frmEditaLeitor.cepFunc.value;
 		leitor.nomeMae = document.frmEditaLeitor.maeFunc.value;
-		leitor.foto = document.frmEditaLeitor.files.value;
 		leitor.id_endereco = document.frmEditaLeitor.idEndereco.value;
 
 
 
 		
 		if(leitor.nome=="" || leitor.cpf=="" || leitor.rg=="" || leitor.data_nasc=="" || leitor.telefone_principal==0 || leitor.telefone_sec=="" || leitor.email=="" || leitor.cidade=="" || leitor.bairro=="" || leitor.rua=="" || leitor.numero=="" || leitor.cep=="" || leitor.login=="" || leitor.senha==""){
-			alert("Preencha corretamente as informações do Funcionário")
+			alert("Preencha corretamente as informações do Leitor")
 		}else{
 			
 			$.ajax({

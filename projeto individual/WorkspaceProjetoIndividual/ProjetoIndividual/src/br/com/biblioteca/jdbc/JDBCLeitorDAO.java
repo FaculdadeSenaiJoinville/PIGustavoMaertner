@@ -80,7 +80,7 @@ public class JDBCLeitorDAO implements LeitorDAO {
 	}
 	
 	public boolean inserirLeitor(Leitor leitor, int retornoIdEndereco) {
-		String comandoFunc = "INSERT INTO leitor (id, nome, cpf, rg, telefone_principal, telefone_secundario, data_nasc, nome_mae, foto, email, endereco_id) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+		String comandoFunc = "INSERT INTO leitor (id, nome, cpf, rg, telefone_principal, telefone_secundario, data_nasc, nome_mae, email, endereco_id) VALUES (?,?,?,?,?,?,?,?,?,?)";
 		PreparedStatement c;
 				
 		String idEndereco = new Gson().toJson(retornoIdEndereco);
@@ -98,9 +98,8 @@ public class JDBCLeitorDAO implements LeitorDAO {
 			c.setString(6, leitor.getTelefone_sec());
 			c.setString(7, leitor.getData_nasc());
 			c.setString(8, leitor.getNomeMae());
-			c.setString(9, leitor.getFoto());
-			c.setString(10, leitor.getEmail());
-			c.setString(11, idEndereco);
+			c.setString(9, leitor.getEmail());
+			c.setString(10, idEndereco);
 
 						
 			c.execute();
@@ -224,8 +223,6 @@ public class JDBCLeitorDAO implements LeitorDAO {
 					int numero = rs.getInt("numero"); 
 					int cep = rs.getInt("cep"); 
 					String nomeMae = rs.getString("nome_mae");
-					String foto = rs.getString("foto");
-
 
 					
 					leitor.setId(id);
@@ -243,7 +240,6 @@ public class JDBCLeitorDAO implements LeitorDAO {
 					leitor.setRua(rua);
 					leitor.setNumero(numero);
 					leitor.setCep(cep);
-					leitor.setFoto(foto);
 
 				}
 			
@@ -262,7 +258,7 @@ public class JDBCLeitorDAO implements LeitorDAO {
 		PreparedStatement p;
 		
 		String comando2 = "UPDATE leitor "
-				+ "SET nome=?, cpf=?, rg=?, telefone_principal=?, telefone_secundario=?, data_nasc=?, nome_mae=?, foto=?, email=? "
+				+ "SET nome=?, cpf=?, rg=?, telefone_principal=?, telefone_secundario=?, data_nasc=?, nome_mae=?, email=? "
 				+ "WHERE id=?";
 		PreparedStatement c;
 		try {
@@ -290,7 +286,6 @@ public class JDBCLeitorDAO implements LeitorDAO {
 			c.setString(5, leitor.getTelefone_sec());
 			c.setString(6, leitor.getData_nasc());
 			c.setString(7, leitor.getNomeMae());
-			c.setString(8, leitor.getFoto());
 			c.setString(9, leitor.getEmail());
 			c.setInt(10, leitor.getId());
 

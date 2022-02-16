@@ -24,7 +24,6 @@ public class Leitor implements Serializable{
 	private int numero;
 	private int cep;
 	private String nomeMae;
-	private String foto;
 	
 	public int getId() {
 		return id;
@@ -115,12 +114,6 @@ public class Leitor implements Serializable{
 	}
 	public void setNomeMae(String nomeMae) {
 		this.nomeMae = nomeMae;
-	}
-	public String getFoto() {
-		return foto;
-	}
-	public void setFoto(String foto) {
-		this.foto = foto;
 	}
 	
 	

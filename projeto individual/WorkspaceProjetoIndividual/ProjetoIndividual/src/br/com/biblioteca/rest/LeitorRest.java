@@ -31,58 +31,6 @@ import br.com.biblioteca.modelo.Leitor;
 @Path("leitor")
 public class LeitorRest extends UtilRest {
 	
-	
-	
-	
-	/*
-	 * @POST
-	 * 
-	 * @Path("/inserirLivro")
-	 * 
-	 * @Consumes(MediaType.MULTIPART_FORM_DATA) public Response uploadFile(
-	 * 
-	 * @FormDataParam("file") InputStream fileInputStream,
-	 * 
-	 * @FormDataParam("file") FormDataContentDisposition contentDispositionHeader) {
-	 * 
-	 * String filePath =
-	 * "D:\Faculdade\projeto individual\WorkspaceProjetoIndividual\ProjetoIndividual\WebContent\imagesUsu"
-	 * + contentDispositionHeader.getFileName();
-	 * 
-	 * // save the file to the server saveFile(fileInputStream, filePath);
-	 * 
-	 * String output = "File saved to server location : " + filePath;
-	 * 
-	 * return Response.status(200).entity(output).build();
-	 * 
-	 * }
-	 */
-// save uploaded file to a defined location on the server
-private void saveFile(InputStream uploadedInputStream, String serverLocation) {
-
-    try {
-        OutputStream outpuStream = new FileOutputStream(new File(serverLocation));
-        int read = 0;
-        byte[] bytes = new byte[1024];
-
-        outpuStream = new FileOutputStream(new File(serverLocation));
-        while ((read = uploadedInputStream.read(bytes)) != -1) {
-            outpuStream.write(bytes, 0, read);
-        }
-        outpuStream.flush();
-        outpuStream.close();
-    } catch (IOException e) {
-
-        e.printStackTrace();
-    }
-
-}
-
-	
-	
-	
-	
-
 	@POST
 	@Path("/inserir")
 	@Consumes("application/*")
@@ -105,7 +53,7 @@ private void saveFile(InputStream uploadedInputStream, String serverLocation) {
 			String msg = "";
 
 			
-			if(validador==1) { 
+			if(validador==1) {
 				System.out.println("ENTREI CPF JA CADASTRADO");
 				msg = "Funcionario com este CPF já cadastrado!";
 			 	conec.fecharConexao();
@@ -141,52 +89,6 @@ private void saveFile(InputStream uploadedInputStream, String serverLocation) {
 		}
 
 	}
-
-	/*
-	 * @POST
-	 * 
-	 * @Path("/inserirImagem")
-	 * 
-	 * @Consumes("application/*") public Response inserirImagem(String leitorParam)
-	 * {
-	 * 
-	 * try { Leitor leitor = null;
-	 * 
-	 * leitor = new Gson().fromJson(leitorParam, Leitor.class); Conexao conec = new
-	 * Conexao(); Connection conexao = conec.abrirConexao();
-	 * 
-	 * JDBCLeitorDAO jdbcLeitor = new JDBCLeitorDAO(conexao);
-	 * 
-	 * //int validador = JDBCLeitorDAO.validaCpf(leitor);
-	 * 
-	 * //System.out.println("VALIDADOR REST"); //System.out.println(validador);
-	 * 
-	 * 
-	 * String msg = "";
-	 * 
-	 * if(validador==1) { System.out.println("ENTREI CPF JA CADASTRADO"); msg =
-	 * "Funcionario com este CPF já cadastrado!"; conec.fecharConexao(); return
-	 * this.buildResponse(msg); //}else if(validador!=1) {
-	 * //System.out.println("ENTREI CPF NÃO CADASTRADO");
-	 * 
-	 * boolean retorno = jdbcLeitor.inserirEndereco(leitor); boolean retornoFunc =
-	 * false; if(retorno) { int retornoIdEndereco =
-	 * jdbcLeitor.buscarEndereco(leitor); retornoFunc =
-	 * jdbcLeitor.inserirLeitor(leitor, retornoIdEndereco); }else { msg =
-	 * "Erro ao cadastrar o funcionario!"; }
-	 * 
-	 * if(retornoFunc) { msg = "Funcionario cadastrado com sucesso!"; } else { msg =
-	 * "Erro ao cadastrar o funcionario!"; } //}
-	 * 
-	 * System.out.println(msg);
-	 * 
-	 * conec.fecharConexao(); return this.buildResponse(msg);
-	 * 
-	 * }catch(Exception e) { e.printStackTrace(); return
-	 * this.buildErrorResponse(e.getMessage()); }
-	 * 
-	 * }
-	 */
 
 	@GET
 	@Path("/buscar")

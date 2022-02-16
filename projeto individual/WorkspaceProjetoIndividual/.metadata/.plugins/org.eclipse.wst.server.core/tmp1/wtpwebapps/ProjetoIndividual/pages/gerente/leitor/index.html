@@ -74,11 +74,7 @@
 			
 			
 			<label class="labelCadastroFunc" id="idCep" for="inputCep">Cep:</label>
-			<input class="funcDireita" type="text" name="cep" id="inputCep" onkeypress="return event.charCode >= 48 && event.charCode <= 57"><br><br><br><br><br><br>
-
-			<label class="labelCadastroFunc" id="idFoto" for="inputFoto">Foto:</label>
-<!-- 			<canvas class="centralizado" id="canvas">your browser is nope!</canvas>-->
-			<input type="file" id="files" name="files">
+			<input class="funcDireita" type="text" name="cep" id="inputCep" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength = "8"><br><br><br><br><br><br>
 						
 		</div>
 			<button class="btnCadastro" id="btnResetCadastro" type="reset">Limpar</button>
@@ -185,14 +181,7 @@
 					<input type="hidden" name="idEndereco" id="idEndereco">
 						</td>	
 					</tr>
-					
-															<tr>						
-					<th>Foto</th>
-						<td>
-							<input type="file" id="files" name="files">
-						</td>	
-					</tr>
-					
+										
 					
 				</table>
 				<input type="hidden" name="idFunc">
