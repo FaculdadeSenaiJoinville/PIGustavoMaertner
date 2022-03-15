@@ -255,8 +255,8 @@ $(document).ready(function(){
 		    (dominio.lastIndexOf(".") < dominio.length - 1)) {
 		}
 		else{
-		alert("E-mail invalido");
-		document.getElementById('email').value=''; 
+			alert("E-mail invalido");
+			document.getElementById('email').value=''; 
 		}
 		}
 	

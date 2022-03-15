@@ -286,8 +286,8 @@ public class JDBCLeitorDAO implements LeitorDAO {
 			c.setString(5, leitor.getTelefone_sec());
 			c.setString(6, leitor.getData_nasc());
 			c.setString(7, leitor.getNomeMae());
-			c.setString(9, leitor.getEmail());
-			c.setInt(10, leitor.getId());
+			c.setString(8, leitor.getEmail());
+			c.setInt(9, leitor.getId());
 
 			
 			c.executeUpdate();

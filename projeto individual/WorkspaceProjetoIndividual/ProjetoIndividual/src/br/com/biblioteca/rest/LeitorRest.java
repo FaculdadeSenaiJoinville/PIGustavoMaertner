@@ -47,15 +47,12 @@ public class LeitorRest extends UtilRest {
 
 			int validador = jdbcLeitor.validaCpf(leitor);
 
-			System.out.println("VALIDADOR REST");
-			System.out.println(validador);
-
 			String msg = "";
 
 			
 			if(validador==1) {
 				System.out.println("ENTREI CPF JA CADASTRADO");
-				msg = "Funcionario com este CPF já cadastrado!";
+				msg = "Leitor com este CPF já cadastrado!";
 			 	conec.fecharConexao();
 			    return this.buildResponse(msg);
 			 
@@ -68,13 +65,13 @@ public class LeitorRest extends UtilRest {
 				int retornoIdEndereco = jdbcLeitor.buscarEndereco(leitor);
 				retornoFunc = jdbcLeitor.inserirLeitor(leitor, retornoIdEndereco);
 			} else {
-				msg = "Erro ao cadastrar o funcionario!";
+				msg = "Erro ao cadastrar o Leitor!";
 			}
 
 			if (retornoFunc) {
-				msg = "Funcionario cadastrado com sucesso!";
+				msg = "Leitor cadastrado com sucesso!";
 			} else {
-				msg = "Erro ao cadastrar o funcionario!";
+				msg = "Erro ao cadastrar o Leitor!";
 			}
 		 }
 
