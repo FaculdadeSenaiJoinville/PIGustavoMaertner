@@ -105,20 +105,6 @@ public class JDBCFuncionarioDAO implements FuncionarioDAO {
 						
 			c.execute();
 			
-			System.out.println(funcionario.getId());
-			System.out.println(funcionario.getLogin());
-			System.out.println(funcionario.getSenha());
-			System.out.println(funcionario.getNome());
-			System.out.println(funcionario.getCpf());
-			System.out.println(funcionario.getRg());
-			System.out.println(funcionario.getTelefone_principal());
-			System.out.println(funcionario.getTelefone_sec());
-			System.out.println(funcionario.getData_nasc());
-			System.out.println(funcionario.getEmail());
-			System.out.println(funcionario.getCargo());
-			System.out.println(funcionario.getId_endereco());
-
-			
 			
 		}catch (SQLException ex){
 			ex.printStackTrace();

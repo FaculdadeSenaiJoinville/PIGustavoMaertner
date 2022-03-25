@@ -1,5 +1,8 @@
 package br.com.biblioteca.rest;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,21 +47,37 @@ public class FuncionarioRest extends UtilRest{
 			
 			JDBCFuncionarioDAO jdbcFuncionario = new JDBCFuncionarioDAO(conexao);
 			
-			int validador = jdbcFuncionario.validaCpf(funcionario);
-			
-			System.out.println("VALIDADOR REST");
-			System.out.println(validador);
-			
+			int validador = jdbcFuncionario.validaCpf(funcionario);			
 			
 			String msg = "";
+			
+			System.out.println(funcionario.getSenha());
+						
+			String senmd5 = "";
+			MessageDigest md = null;
+			
+			try {
+				md = MessageDigest.getInstance("MD5");
+			} catch (NoSuchAlgorithmException e) {
+				e.printStackTrace();
+			}
+
+			BigInteger hash = new BigInteger(1, md.digest(funcionario.getSenha().getBytes()));
+			
+			senmd5 = hash.toString(32);
+
+            System.out.println("senmd5");
+
+            System.out.println(senmd5);
+            
+            funcionario.setSenha(senmd5);
+
 			
 			if(validador==1) {
 				msg = "Funcionario com este CPF já cadastrado!";
 				conec.fecharConexao();
 				return this.buildResponse(msg);
 			}else if(validador!=1) {
-				System.out.println("ENTREI CPF NÃO CADASTRADO");
-
 				boolean retorno = jdbcFuncionario.inserirEndereco(funcionario);
 				boolean retornoFunc = false;
 				if(retorno) {

@@ -13,6 +13,30 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 	
+  <servlet>
+  	<servlet-name>AutenticaServlet</servlet-name>
+  	<servlet-class>LoginServlet.AutenticacaoServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AutenticaServlet</servlet-name>
+  	<url-pattern>/autenticar</url-pattern>
+  </servlet-mapping>
+  
+   <filter>
+  	
+  	<filter-name>ServletFilter</filter-name>
+  	<filter-class>Filter.ServletFilter</filter-class>
+  	
+  </filter>
+  
+  <filter-mapping>
+  
+  	<filter-name>ServletFilter</filter-name>
+  	<url-pattern>/pages/*</url-pattern>
+  
+  </filter-mapping>
+	
 	<servlet>
 		<servlet-name>Jersey REST Service</servlet-name>
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
